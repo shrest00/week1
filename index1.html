@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Tip Calculator</title>
+</head>
+<body>
+
+    <script>
+        //Prompt user to input their bill amount
+        let userInput = prompt("Enter your bill amount");
+        let billAmount = parseFloat(userInput);
+
+        // validate  the bill amount 
+
+        if (isNaN(billAmount) || billAmount<=0){
+            alert("Please enter a valid number.");
+
+        }
+        else{
+            //calculate the taxbill, tip and totalbill
+            let taxbill = billAmount * 1.07;
+
+            let tip = taxbill * 0.15;
+
+            let totalBill = taxbill + tip;
+
+         //display total bill result
+            document.write("Your total bill after tax and tip is $ "+ totalBill.toFixed(2));
+        }
+
+    </script>
+
+</body>
+</html>
